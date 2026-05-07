@@ -1507,6 +1507,31 @@
     .demo-section { padding: 40px 24px 80px; }
   }
 
+  /* === ESTRATEGIA ANUAL === */
+  .strat-cover { justify-content: center; align-items: center; text-align: center; }
+  .strat-cover h1 { font-family: var(--f-display); font-size: clamp(48px,8vw,120px); text-transform: uppercase; color: var(--bone); }
+  .strat-cover h1 span { color: var(--cyan); }
+  .strat-cover .strat-sub { font-family: 'Fraunces',serif; font-style: italic; font-size: clamp(16px,1.8vw,24px); color: var(--bone-dim); margin-top: 16px; }
+  .strat-cover .strat-stats { display: flex; gap: 40px; margin-top: 48px; justify-content: center; }
+  .strat-cover .strat-stat { text-align: center; }
+  .strat-cover .strat-stat .ss-num { font-family: var(--f-display); font-size: 56px; color: var(--cyan); }
+  .strat-cover .strat-stat .ss-label { font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mute); margin-top: 4px; }
+
+  .strat-cal { padding: 80px 60px 120px; overflow-y: auto; display: flex !important; flex-direction: column; gap: 0; }
+  .strat-month { margin-bottom: 36px; flex-shrink: 0; }
+  .strat-month-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .strat-month-num { font-family: var(--f-display); font-size: 36px; color: var(--cyan); }
+  .strat-month-name { font-family: var(--f-display); font-size: 22px; text-transform: uppercase; color: var(--bone); }
+  .strat-month-theme { font-family: 'Fraunces',serif; font-style: italic; font-size: 14px; color: var(--bone-dim); margin-left: auto; }
+  .strat-cols { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+  .strat-col { background: rgba(14,14,18,0.65); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.06); padding: 16px 18px; }
+  .strat-col-title { font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+  .strat-col ul { list-style: none; padding: 0; margin: 0; }
+  .strat-col li { font-size: 13px; color: var(--bone-dim); padding: 3px 0; line-height: 1.4; }
+  .strat-col li::before { content: '→ '; color: var(--cyan); }
+  .strat-col li strong { color: var(--bone); font-weight: 500; }
+  @media(max-width:900px){ .strat-cols { grid-template-columns: 1fr; } .strat-cal { padding: 40px 24px 80px; } }
+
   /* === Subtitle (reusable) === */
   .subtitle {
     font-size: clamp(16px, 1.4vw, 22px);
@@ -2485,6 +2510,470 @@
 
 </section>
 
+<!-- ============================== S22 / ESTRATEGIA COVER ============================== -->
+<section class="strat-cover">
+  <div class="slide-tag" style="left:50%;transform:translateX(-50%);">20 · ESTRATEGIA</div>
+  <div class="eyebrow reveal" style="justify-content:center;">Plan anual</div>
+  <h1 class="reveal delay-1">Estrategia<br><span>de contenidos</span></h1>
+  <p class="strat-sub reveal delay-2">12 meses · 13 marcas · 88 modelos · 7 categorias</p>
+  <div class="strat-stats reveal delay-3">
+    <div class="strat-stat"><div class="ss-num">34</div><div class="ss-label">SUVs</div></div>
+    <div class="strat-stat"><div class="ss-num">11</div><div class="ss-label">Pickups</div></div>
+    <div class="strat-stat"><div class="ss-num">12</div><div class="ss-label">Motos BMW</div></div>
+    <div class="strat-stat"><div class="ss-num">9</div><div class="ss-label">Sedan/Hatch</div></div>
+    <div class="strat-stat"><div class="ss-num">6</div><div class="ss-label">Electricos</div></div>
+    <div class="strat-stat"><div class="ss-num">6</div><div class="ss-label">Premium</div></div>
+    <div class="strat-stat"><div class="ss-num">10</div><div class="ss-label">Utility</div></div>
+  </div>
+</section>
+
+<!-- ============================== S23 / CALENDARIO 12 MESES ============================== -->
+<section class="strat-cal dense">
+  <div class="slide-tag">21 · CALENDARIO</div>
+
+  <!-- MES 1 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">01</div>
+      <div class="strat-month-name">Julio</div>
+      <div class="strat-month-theme">Lanzamiento del sistema — Onboarding primeras marcas</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Jeep Compass / Renegade</strong> — Entrega 0km, primer unboxing</li>
+          <li><strong>Chevrolet Tracker</strong> — Familia real, viaje corto urbano</li>
+          <li><strong>Kia Sportage</strong> — Review propietario, 6 meses de uso</li>
+          <li><strong>FIAT Strada</strong> — Trabajador real, carga y ruta</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar Jeep</strong> — Presentacion Wrangler: mitos vs realidad</li>
+          <li><strong>Avatar Nissan</strong> — Comparativa Frontier vs S10 vs Toro</li>
+          <li><strong>Avatar Kia</strong> — Guia: que SUV elegir segun tu familia</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>6 reels SUV (Sportage, Compass, Tracker, Seltos, CX30, T4)</li>
+          <li>4 carousels comparativos pickups</li>
+          <li>2 hero films: Jeep aventura + RAM potencia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 2 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">02</div>
+      <div class="strat-month-name">Agosto</div>
+      <div class="strat-month-theme">Pickups y utilitarios — Temporada de trabajo</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>RAM 1500</strong> — Ganadero real, campo paraguayo</li>
+          <li><strong>Nissan Frontier</strong> — Constructor, obra en proceso</li>
+          <li><strong>Chevrolet S10 / Montana</strong> — Emprendedor logistica</li>
+          <li><strong>FIAT Toro</strong> — Doble vida: ciudad + campo</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar RAM</strong> — RAM 1500 vs Silverado: que conviene</li>
+          <li><strong>Avatar FIAT</strong> — Strada vs Montana: pickup chica a fondo</li>
+          <li><strong>Avatar Mazda</strong> — BT50: la pickup que nadie conoce</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>8 reels pickups (todas las marcas)</li>
+          <li>3 carousels: costo de mantenimiento real</li>
+          <li>2 hero films: Frontier ruta + Toro versatil</li>
+          <li>Icaur/Chery: utilitarios comerciales, costo-beneficio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 3 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">03</div>
+      <div class="strat-month-name">Septiembre</div>
+      <div class="strat-month-theme">SUVs familiares — Dia de la primavera + vacaciones</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Kia Sorento / Carnival</strong> — Familia numerosa, road trip</li>
+          <li><strong>Nissan Pathfinder</strong> — Viaje largo, 7 pasajeros</li>
+          <li><strong>Mazda CX90</strong> — Familia premium, fin de semana</li>
+          <li><strong>Jeep Commander</strong> — Aventura familiar controlada</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar Kia</strong> — Carens vs Carnival: espacio vs estilo</li>
+          <li><strong>Avatar Chevrolet</strong> — Trailblazer: SUV grande, precio accesible</li>
+          <li><strong>Avatar Nissan</strong> — Patrol: el SUV mas grande del mercado</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>6 reels SUV familiares (3+ filas)</li>
+          <li>4 stories: configurador visual por familia</li>
+          <li>2 hero films: Sorento viaje + Commander aventura</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 4 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">04</div>
+      <div class="strat-month-name">Octubre</div>
+      <div class="strat-month-theme">Electricos e hibridos — Futuro de la movilidad</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Volvo EX30</strong> — Primer electrico, carga en casa real</li>
+          <li><strong>Kia EV5</strong> — Vida diaria sin nafta, costos reales</li>
+          <li><strong>MINI Aceman</strong> — Electrico urbano, lifestyle joven</li>
+          <li><strong>Volvo XC60</strong> — Hibrido, mejor de dos mundos</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar Volvo</strong> — EX30 vs EX40 vs EX90: cual es tu electrico</li>
+          <li><strong>Avatar Kia</strong> — EV9: el SUV electrico premium mas accesible</li>
+          <li><strong>Avatar MINI</strong> — Aceman vs Cooper electrico: ciudad sin emision</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>6 reels educacionales: mitos electricos</li>
+          <li>4 carousels: costo real vs combustion</li>
+          <li>2 hero films: Volvo silencio + Kia EV futuro</li>
+          <li>Serie: donde cargar en Paraguay</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 5 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">05</div>
+      <div class="strat-month-name">Noviembre</div>
+      <div class="strat-month-theme">Premium y lifestyle — Black Friday + fin de año</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>MINI Cooper / Cabrio</strong> — Lifestyle urbano, salida nocturna</li>
+          <li><strong>Abarth Pulse / Fastback</strong> — Performance real, circuito</li>
+          <li><strong>Mazda CX60</strong> — Premium accesible, diseño japones</li>
+          <li><strong>Volvo XC90</strong> — Lujo escandinavo, seguridad</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar MINI</strong> — Cooper vs Countryman: cual es tu MINI</li>
+          <li><strong>Avatar Mazda</strong> — CX5 vs CX60: salto premium</li>
+          <li><strong>Avatar Abarth</strong> — Pulse Abarth: el hot hatch paraguayo</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>Black Friday: ofertas especiales todas las marcas</li>
+          <li>6 reels premium (MINI, Volvo, Mazda, Abarth)</li>
+          <li>4 carousels: regalate tu auto antes de fin de año</li>
+          <li>2 hero films: MINI ciudad + Abarth adrenalina</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 6 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">06</div>
+      <div class="strat-month-name">Diciembre</div>
+      <div class="strat-month-theme">Cierre de año — Todas las marcas, volumen maximo</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Multi-marca</strong> — Mejores momentos del año, compilado UGC</li>
+          <li><strong>Entregas 0km</strong> — Especial navidad, regalo mas grande</li>
+          <li><strong>Chevrolet Onix</strong> — Primer auto, historia real</li>
+          <li><strong>Kia Picanto</strong> — El urbano que todos quieren</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar multi-marca</strong> — Top 10 modelos del año Garden</li>
+          <li><strong>Avatar Chevrolet</strong> — Onix vs Versa vs Soluto: sedan entry</li>
+          <li><strong>Avatar FIAT</strong> — Mobi vs Argo: cual es tu primer FIAT</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>Campaña cierre: stock disponible, entrega inmediata</li>
+          <li>8 reels todas las categorias</li>
+          <li>6 carousels: financiacion fin de año</li>
+          <li>2 hero films: resumen anual Garden</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 7 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">07</div>
+      <div class="strat-month-name">Enero</div>
+      <div class="strat-month-theme">Verano + motos — Temporada alta BMW Motorrad</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>BMW R1300 GS</strong> — Rider real, ruta Chaco</li>
+          <li><strong>BMW 310 GS</strong> — Primera adventure, joven motociclista</li>
+          <li><strong>BMW S1000 RR</strong> — Track day, velocidad real</li>
+          <li><strong>BMW CE 02 / CE 04</strong> — Movilidad electrica urbana</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar BMW Motos</strong> — R1300 GS vs F900 GS: adventure a fondo</li>
+          <li><strong>Avatar BMW Motos</strong> — S1000 RR vs S1000 XR: pista vs ruta</li>
+          <li><strong>Avatar BMW Motos</strong> — CE 02: la moto electrica urbana del futuro</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>8 reels BMW Motos (todo el lineup)</li>
+          <li>4 carousels: guia de motos por perfil</li>
+          <li>2 hero films: R1300 GS aventura + S1000 RR circuito</li>
+          <li>Serie: equipamiento y seguridad</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 8 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">08</div>
+      <div class="strat-month-name">Febrero</div>
+      <div class="strat-month-theme">SUV compactos — El segmento mas competido</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Kia Seltos</strong> — Pareja joven, primer SUV</li>
+          <li><strong>Nissan Qashqai</strong> — Ciudad y escapada, versatilidad</li>
+          <li><strong>Chery T4 / T7</strong> — Costo-beneficio real, sorpresa china</li>
+          <li><strong>FIAT Pulse</strong> — Diseño italiano, precio paraguayo</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar multi</strong> — Gran comparativa: Seltos vs Tracker vs CX30 vs T4</li>
+          <li><strong>Avatar Chery</strong> — T8: el SUV grande que cuesta como uno chico</li>
+          <li><strong>Avatar FIAT</strong> — Pulse vs Fastback: SUV coupe vs clasico</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>8 reels comparativos SUV compactos</li>
+          <li>4 carousels: precio vs equipamiento</li>
+          <li>2 hero films: Seltos urbano + Qashqai escapada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 9 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">09</div>
+      <div class="strat-month-name">Marzo</div>
+      <div class="strat-month-theme">Sedanes y hatches — Vuelta a clases, primer auto</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Chevrolet Onix</strong> — Universitario, primer auto propio</li>
+          <li><strong>Kia Picanto</strong> — Ciudad pura, estacionamiento facil</li>
+          <li><strong>Nissan Versa</strong> — Uber/taxi, rendimiento real</li>
+          <li><strong>FIAT Mobi / Argo</strong> — Entry level, costo por km</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar Chevrolet</strong> — Onix vs Onix Sedan: hatch o baul</li>
+          <li><strong>Avatar Kia</strong> — Picanto vs Soluto: chico vs sedan</li>
+          <li><strong>Avatar Nissan</strong> — Sentra: el sedan que quiere ser premium</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>6 reels primer auto (historias reales)</li>
+          <li>4 carousels: financiacion joven</li>
+          <li>2 hero films: Onix libertad + Picanto ciudad</li>
+          <li>Serie: costo real de tener auto en Paraguay</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 10 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">10</div>
+      <div class="strat-month-name">Abril</div>
+      <div class="strat-month-theme">Utilitarios y comerciales — Motor del negocio</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>FIAT Fiorino</strong> — Delivery real, emprendedor</li>
+          <li><strong>Kia K2700</strong> — Flota comercial, caso de negocio</li>
+          <li><strong>Icaur V23 / V27</strong> — Transporte de carga, costo operativo</li>
+          <li><strong>Chery M7</strong> — Minivan comercial, versatilidad</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar FIAT</strong> — Fiorino: el socio del emprendedor</li>
+          <li><strong>Avatar Icaur</strong> — V23 vs V27: capacidad de carga real</li>
+          <li><strong>Avatar Kia</strong> — K2700 vs Fiorino: que conviene para tu negocio</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>6 reels casos de negocio reales</li>
+          <li>4 carousels: ROI por vehiculo comercial</li>
+          <li>2 hero films: Fiorino emprendedor + flota Icaur</li>
+          <li>Campaña B2B: flotas corporativas Garden</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 11 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">11</div>
+      <div class="strat-month-name">Mayo</div>
+      <div class="strat-month-theme">SUVs medianos — El corazon del mercado</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Nissan Xtrail</strong> — Familia activa, deporte + hijos</li>
+          <li><strong>Mazda CX5</strong> — Diseño y manejo, propietario real</li>
+          <li><strong>Kia Sportage</strong> — El mas vendido, por que lo eligen</li>
+          <li><strong>Jeep Compass</strong> — Trail rated, aventura accesible</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar multi</strong> — Sportage vs CX5 vs Compass vs Xtrail</li>
+          <li><strong>Avatar Jeep</strong> — Compass vs Renegade: cual Jeep sos</li>
+          <li><strong>Avatar Mazda</strong> — CX30 vs CX5: tamaño vs agilidad</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>8 reels SUV medianos (batalla directa)</li>
+          <li>4 carousels: equipamiento vs precio</li>
+          <li>2 hero films: Sportage dinamismo + CX5 diseño</li>
+          <li>Dia de la madre: campaña emocional multi-marca</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MES 12 -->
+  <div class="strat-month">
+    <div class="strat-month-head">
+      <div class="strat-month-num">12</div>
+      <div class="strat-month-name">Junio</div>
+      <div class="strat-month-theme">Renovacion — Modelos nuevos + segundo semestre</div>
+    </div>
+    <div class="strat-cols">
+      <div class="strat-col">
+        <div class="strat-col-title">UGC + Organico</div>
+        <ul>
+          <li><strong>Lanzamientos nuevos</strong> — Primeros test drive, reacciones reales</li>
+          <li><strong>RAM Dakota / Rampage</strong> — Pickup mediana, nicho creciente</li>
+          <li><strong>Chery Himla</strong> — Revelacion china, review honesto</li>
+          <li><strong>MINI Countryman</strong> — SUV premium compacto, hibrido</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Review IA + Avatares</div>
+        <ul>
+          <li><strong>Avatar RAM</strong> — Dakota vs Rampage: pickup mediana a fondo</li>
+          <li><strong>Avatar Chery</strong> — Himla: todo lo que necesitas saber</li>
+          <li><strong>Avatar multi</strong> — Balance semestre 1: que funciono, que viene</li>
+        </ul>
+      </div>
+      <div class="strat-col">
+        <div class="strat-col-title">Content Pauta</div>
+        <ul>
+          <li>Campaña renovacion: ofertas segundo semestre</li>
+          <li>6 reels lanzamientos y novedades</li>
+          <li>4 carousels: que cambio en cada marca</li>
+          <li>2 hero films: vision Garden + futuro electrico</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <script>
   function toggleDemoSound(btn) {
     const card = btn.closest('.demo-card-v');
@@ -2514,7 +3003,7 @@
     'Diferencial', 'Tendencias 2026', 'Bisagra', 'Insight', 'Concepto',
     'Claim', 'Estrategia', 'Personaje Garden', 'Motor', 'Capacidades',
     'UGC', 'Conectores', 'Modelo',
-    'Proximo paso', 'Gracias', 'Demos'
+    'Proximo paso', 'Gracias', 'Demos', 'Estrategia', 'Calendario'
   ];
 
   const hudCurr = document.getElementById('hudCurr');
