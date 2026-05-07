@@ -1532,6 +1532,36 @@
   .strat-col li strong { color: var(--bone); font-weight: 500; }
   @media(max-width:900px){ .strat-cols { grid-template-columns: 1fr; } .strat-cal { padding: 40px 24px 80px; } }
 
+  /* === FASES DE CAMPAÑA === */
+  .fase-slide { padding: 80px 60px; overflow-y: auto; display: flex !important; flex-direction: column; gap: 0; }
+  .fase-header { margin-bottom: 40px; }
+  .fase-num { font-family: var(--f-display); font-size: clamp(80px,10vw,140px); color: var(--cyan); opacity: 0.15; line-height: 0.85; position: absolute; top: 60px; right: 60px; }
+  .fase-tag { font-family: 'JetBrains Mono',monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+  .fase-title { font-family: var(--f-display); font-size: clamp(32px,5vw,64px); text-transform: uppercase; color: var(--bone); line-height: 1; }
+  .fase-title span { color: var(--cyan); }
+  .fase-period { font-family: 'JetBrains Mono',monospace; font-size: 11px; color: var(--mute); margin-top: 8px; letter-spacing: 0.1em; }
+  .fase-desc { font-family: 'Fraunces',serif; font-style: italic; font-size: clamp(15px,1.4vw,20px); color: var(--bone-dim); max-width: 600px; margin-top: 16px; line-height: 1.5; }
+
+  .fase-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 32px; }
+  .fase-card { background: rgba(14,14,18,0.65); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.06); padding: 24px 22px; }
+  .fase-card-label { font-family: 'JetBrains Mono',monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
+  .fase-card-title { font-family: var(--f-display); font-size: 20px; text-transform: uppercase; color: var(--bone); margin-bottom: 10px; }
+  .fase-card ul { list-style: none; padding: 0; margin: 0; }
+  .fase-card li { font-size: 13px; color: var(--bone-dim); padding: 3px 0; line-height: 1.4; }
+  .fase-card li::before { content: '→ '; color: var(--cyan); }
+  .fase-card li strong { color: var(--bone); font-weight: 500; }
+
+  .fase-brands { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .fase-brand { font-family: 'JetBrains Mono',monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.1); color: var(--bone-dim); }
+  .fase-brand.active { border-color: var(--cyan); color: var(--bone); background: rgba(212,32,39,0.08); }
+
+  .fase-kpi { display: flex; gap: 32px; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .fase-kpi-item { text-align: center; }
+  .fase-kpi-num { font-family: var(--f-display); font-size: 32px; color: var(--cyan); }
+  .fase-kpi-label { font-family: 'JetBrains Mono',monospace; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mute); margin-top: 2px; }
+
+  @media(max-width:900px){ .fase-grid { grid-template-columns: 1fr; } .fase-slide { padding: 40px 24px; } .fase-num { font-size: 60px; right: 20px; top: 30px; } }
+
   /* === Subtitle (reusable) === */
   .subtitle {
     font-size: clamp(16px, 1.4vw, 22px);
@@ -2527,9 +2557,285 @@
   </div>
 </section>
 
-<!-- ============================== S23 / CALENDARIO 12 MESES ============================== -->
+<!-- ============================== FASE 1 ============================== -->
+<section class="fase-slide dense">
+  <div class="slide-tag">21 · FASE 1</div>
+  <div class="fase-num">01</div>
+
+  <div class="fase-header">
+    <div class="fase-tag reveal">Meses 1–3 · Julio — Septiembre</div>
+    <div class="fase-title reveal delay-1">Encender<br><span>el motor</span></div>
+    <div class="fase-desc reveal delay-2">Onboarding de las primeras marcas. Armamos territorios, personajes y pipeline IA. Las primeras piezas salen a la calle y empezamos a medir.</div>
+  </div>
+
+  <div class="fase-grid reveal delay-3">
+    <div class="fase-card">
+      <div class="fase-card-label">UGC + Organico</div>
+      <div class="fase-card-title">Primeras historias reales</div>
+      <ul>
+        <li><strong>Entregas 0km</strong> — Cada venta es contenido: unboxing del auto mas grande</li>
+        <li><strong>Propietarios reales</strong> — Reviews honestos de dueños actuales</li>
+        <li><strong>Trabajadores</strong> — Pickups y utilitarios en accion real</li>
+        <li><strong>Road trips</strong> — SUVs familiares, primavera paraguaya</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Review IA + Avatares</div>
+      <div class="fase-card-title">Lanzamiento de voceros</div>
+      <ul>
+        <li><strong>1 avatar por marca activa</strong> — Entrenado con tono e identidad propios</li>
+        <li><strong>Comparativas inaugurales</strong> — SUV vs SUV, pickup vs pickup</li>
+        <li><strong>Guias de compra</strong> — Que modelo elegir segun tu perfil</li>
+        <li><strong>Educacionales</strong> — Financiacion, seguros, mantenimiento</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Content para pauta</div>
+      <div class="fase-card-title">Volumen inicial</div>
+      <ul>
+        <li><strong>18 reels/mes</strong> — 6 por marca activa, multiformato</li>
+        <li><strong>12 carousels/mes</strong> — Comparativos, features, costos</li>
+        <li><strong>6 hero films</strong> — 2 por mes, produccion cinematica IA</li>
+        <li><strong>Stories + Shorts</strong> — Adaptacion nativa por plataforma</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fase-brands reveal delay-4">
+    <div class="fase-brand active">Jeep</div>
+    <div class="fase-brand active">Kia</div>
+    <div class="fase-brand active">Nissan</div>
+    <div class="fase-brand active">Chevrolet</div>
+    <div class="fase-brand active">FIAT</div>
+    <div class="fase-brand active">RAM</div>
+    <div class="fase-brand">Mazda</div>
+    <div class="fase-brand">Chery</div>
+    <div class="fase-brand">Volvo</div>
+    <div class="fase-brand">MINI</div>
+    <div class="fase-brand">BMW Motos</div>
+    <div class="fase-brand">Abarth</div>
+    <div class="fase-brand">Icaur</div>
+  </div>
+
+  <div class="fase-kpi reveal delay-4">
+    <div class="fase-kpi-item"><div class="fase-kpi-num">6</div><div class="fase-kpi-label">Marcas activas</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">108</div><div class="fase-kpi-label">Piezas totales</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">6</div><div class="fase-kpi-label">Hero films</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">6</div><div class="fase-kpi-label">Avatares IA</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">18</div><div class="fase-kpi-label">Reviews IA</div></div>
+  </div>
+</section>
+
+<!-- ============================== FASE 2 ============================== -->
+<section class="fase-slide dense">
+  <div class="slide-tag">22 · FASE 2</div>
+  <div class="fase-num">02</div>
+
+  <div class="fase-header">
+    <div class="fase-tag reveal">Meses 4–6 · Octubre — Diciembre</div>
+    <div class="fase-title reveal delay-1">Escalar<br><span>con data</span></div>
+    <div class="fase-desc reveal delay-2">El sistema ya produce. Ahora optimizamos por data cruzada entre marcas, sumamos las verticales premium y electricos, y lanzamos las primeras campañas estacionales coordinadas.</div>
+  </div>
+
+  <div class="fase-grid reveal delay-3">
+    <div class="fase-card">
+      <div class="fase-card-label">UGC + Organico</div>
+      <div class="fase-card-title">Expansion de voces</div>
+      <ul>
+        <li><strong>Electricos</strong> — Primer EV, carga en casa, costos reales (Volvo, Kia)</li>
+        <li><strong>Premium</strong> — MINI lifestyle, Abarth performance, Mazda diseño</li>
+        <li><strong>Multi-marca navidad</strong> — Entregas 0km como regalo, compilado anual</li>
+        <li><strong>Black Friday</strong> — Contenido de oferta coordinado</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Review IA + Avatares</div>
+      <div class="fase-card-title">Especializacion</div>
+      <ul>
+        <li><strong>Nuevos avatares</strong> — Volvo, MINI, Mazda, Abarth</li>
+        <li><strong>Serie electricos</strong> — Mitos, costos, infraestructura Paraguay</li>
+        <li><strong>Top 10 del año</strong> — Ranking multi-marca de fin de año</li>
+        <li><strong>Comparativas premium</strong> — CX60 vs XC60 vs Countryman</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Content para pauta</div>
+      <div class="fase-card-title">Volumen x2</div>
+      <ul>
+        <li><strong>30 reels/mes</strong> — Todas las marcas activas</li>
+        <li><strong>16 carousels/mes</strong> — Optimizados por data del Q1</li>
+        <li><strong>6 hero films</strong> — Premium + electricos + cierre de año</li>
+        <li><strong>Campañas estacionales</strong> — Black Friday + Navidad + Año Nuevo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fase-brands reveal delay-4">
+    <div class="fase-brand active">Jeep</div>
+    <div class="fase-brand active">Kia</div>
+    <div class="fase-brand active">Nissan</div>
+    <div class="fase-brand active">Chevrolet</div>
+    <div class="fase-brand active">FIAT</div>
+    <div class="fase-brand active">RAM</div>
+    <div class="fase-brand active">Mazda</div>
+    <div class="fase-brand active">Volvo</div>
+    <div class="fase-brand active">MINI</div>
+    <div class="fase-brand active">Abarth</div>
+    <div class="fase-brand">Chery</div>
+    <div class="fase-brand">BMW Motos</div>
+    <div class="fase-brand">Icaur</div>
+  </div>
+
+  <div class="fase-kpi reveal delay-4">
+    <div class="fase-kpi-item"><div class="fase-kpi-num">10</div><div class="fase-kpi-label">Marcas activas</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">276</div><div class="fase-kpi-label">Piezas totales</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">6</div><div class="fase-kpi-label">Hero films</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">10</div><div class="fase-kpi-label">Avatares IA</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">3</div><div class="fase-kpi-label">Campañas estacionales</div></div>
+  </div>
+</section>
+
+<!-- ============================== FASE 3 ============================== -->
+<section class="fase-slide dense">
+  <div class="slide-tag">23 · FASE 3</div>
+  <div class="fase-num">03</div>
+
+  <div class="fase-header">
+    <div class="fase-tag reveal">Meses 7–9 · Enero — Marzo</div>
+    <div class="fase-title reveal delay-1">Dominar<br><span>cada vertical</span></div>
+    <div class="fase-desc reveal delay-2">BMW Motos entra con fuerza en verano. Los sedanes y hatches atacan el segmento primer auto. Chery e Icaur completan el portfolio. Cada categoria tiene su estrategia propia.</div>
+  </div>
+
+  <div class="fase-grid reveal delay-3">
+    <div class="fase-card">
+      <div class="fase-card-label">UGC + Organico</div>
+      <div class="fase-card-title">Verticales completas</div>
+      <ul>
+        <li><strong>BMW Motos</strong> — Riders reales, track days, rutas Chaco, movilidad electrica</li>
+        <li><strong>SUV compactos</strong> — La batalla mas competida: Seltos vs Tracker vs CX30 vs T4</li>
+        <li><strong>Primer auto</strong> — Universitarios, historias reales con Onix, Picanto, Mobi</li>
+        <li><strong>Chery / Icaur</strong> — Sorpresa china, costo-beneficio real</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Review IA + Avatares</div>
+      <div class="fase-card-title">Cobertura total</div>
+      <ul>
+        <li><strong>Avatar BMW Motos</strong> — Adventure vs Sport vs Electric</li>
+        <li><strong>Gran comparativa</strong> — SUV compactos: 8 modelos frente a frente</li>
+        <li><strong>Serie primer auto</strong> — Costo real de tener auto en Paraguay</li>
+        <li><strong>Avatar Chery</strong> — T8 y Himla: lo que nadie te cuenta</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Content para pauta</div>
+      <div class="fase-card-title">Volumen pico</div>
+      <ul>
+        <li><strong>40+ reels/mes</strong> — 13 marcas produciendo en paralelo</li>
+        <li><strong>20 carousels/mes</strong> — Segmentados por audiencia</li>
+        <li><strong>8 hero films</strong> — Motos, SUV, sedan, utilitarios</li>
+        <li><strong>Serie financiacion joven</strong> — Vuelta a clases + primer auto</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fase-brands reveal delay-4">
+    <div class="fase-brand active">Jeep</div>
+    <div class="fase-brand active">Kia</div>
+    <div class="fase-brand active">Nissan</div>
+    <div class="fase-brand active">Chevrolet</div>
+    <div class="fase-brand active">FIAT</div>
+    <div class="fase-brand active">RAM</div>
+    <div class="fase-brand active">Mazda</div>
+    <div class="fase-brand active">Volvo</div>
+    <div class="fase-brand active">MINI</div>
+    <div class="fase-brand active">Abarth</div>
+    <div class="fase-brand active">BMW Motos</div>
+    <div class="fase-brand active">Chery</div>
+    <div class="fase-brand active">Icaur</div>
+  </div>
+
+  <div class="fase-kpi reveal delay-4">
+    <div class="fase-kpi-item"><div class="fase-kpi-num">13</div><div class="fase-kpi-label">Marcas activas</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">408</div><div class="fase-kpi-label">Piezas totales</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">8</div><div class="fase-kpi-label">Hero films</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">13</div><div class="fase-kpi-label">Avatares IA</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">88</div><div class="fase-kpi-label">Modelos cubiertos</div></div>
+  </div>
+</section>
+
+<!-- ============================== FASE 4 ============================== -->
+<section class="fase-slide dense">
+  <div class="slide-tag">24 · FASE 4</div>
+  <div class="fase-num">04</div>
+
+  <div class="fase-header">
+    <div class="fase-tag reveal">Meses 10–12 · Abril — Junio</div>
+    <div class="fase-title reveal delay-1">Sistema<br><span>autonomo</span></div>
+    <div class="fase-desc reveal delay-2">Las 13 marcas corren solas. El sistema aprende de cada campaña, optimiza por data cruzada y produce a escala sin pausa. Lanzamientos nuevos entran directo al pipeline.</div>
+  </div>
+
+  <div class="fase-grid reveal delay-3">
+    <div class="fase-card">
+      <div class="fase-card-label">UGC + Organico</div>
+      <div class="fase-card-title">Comunidad activa</div>
+      <ul>
+        <li><strong>Red de creators</strong> — Programa establecido, contenido recurrente</li>
+        <li><strong>Utilitarios B2B</strong> — Casos de negocio, flotas corporativas</li>
+        <li><strong>SUVs medianos</strong> — Sportage vs CX5 vs Compass: la gran batalla</li>
+        <li><strong>Lanzamientos</strong> — Modelos nuevos directo al sistema</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Review IA + Avatares</div>
+      <div class="fase-card-title">Autoridad de marca</div>
+      <ul>
+        <li><strong>Balance semestral</strong> — Que funciono, data real compartida</li>
+        <li><strong>Nuevos modelos</strong> — Reviews instantaneos via avatar</li>
+        <li><strong>Serie B2B</strong> — ROI por vehiculo comercial, Fiorino vs K2700 vs Icaur</li>
+        <li><strong>Dia de la madre</strong> — Campaña emocional multi-marca</li>
+      </ul>
+    </div>
+    <div class="fase-card">
+      <div class="fase-card-label">Content para pauta</div>
+      <div class="fase-card-title">Maquina encendida</div>
+      <ul>
+        <li><strong>40+ reels/mes</strong> — Produccion continua, sin pausas</li>
+        <li><strong>20 carousels/mes</strong> — A/B testing automatizado</li>
+        <li><strong>8 hero films</strong> — Renovacion + vision segundo año</li>
+        <li><strong>Campaña renovacion</strong> — Ofertas segundo semestre, stock</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fase-brands reveal delay-4">
+    <div class="fase-brand active">Jeep</div>
+    <div class="fase-brand active">Kia</div>
+    <div class="fase-brand active">Nissan</div>
+    <div class="fase-brand active">Chevrolet</div>
+    <div class="fase-brand active">FIAT</div>
+    <div class="fase-brand active">RAM</div>
+    <div class="fase-brand active">Mazda</div>
+    <div class="fase-brand active">Volvo</div>
+    <div class="fase-brand active">MINI</div>
+    <div class="fase-brand active">Abarth</div>
+    <div class="fase-brand active">BMW Motos</div>
+    <div class="fase-brand active">Chery</div>
+    <div class="fase-brand active">Icaur</div>
+  </div>
+
+  <div class="fase-kpi reveal delay-4">
+    <div class="fase-kpi-item"><div class="fase-kpi-num">13</div><div class="fase-kpi-label">Marcas activas</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">2880+</div><div class="fase-kpi-label">Piezas año</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">28</div><div class="fase-kpi-label">Hero films año</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">13</div><div class="fase-kpi-label">Avatares activos</div></div>
+    <div class="fase-kpi-item"><div class="fase-kpi-num">∞</div><div class="fase-kpi-label">Escalabilidad</div></div>
+  </div>
+</section>
+
+<!-- ============================== CALENDARIO RESUMEN ============================== -->
 <section class="strat-cal dense">
-  <div class="slide-tag">21 · CALENDARIO</div>
+  <div class="slide-tag">25 · CALENDARIO</div>
 
   <!-- MES 1 -->
   <div class="strat-month">
@@ -3003,7 +3309,8 @@
     'Diferencial', 'Tendencias 2026', 'Bisagra', 'Insight', 'Concepto',
     'Claim', 'Estrategia', 'Personaje Garden', 'Motor', 'Capacidades',
     'UGC', 'Conectores', 'Modelo',
-    'Proximo paso', 'Gracias', 'Demos', 'Estrategia', 'Calendario'
+    'Proximo paso', 'Gracias', 'Demos', 'Estrategia',
+    'Fase 1', 'Fase 2', 'Fase 3', 'Fase 4', 'Calendario'
   ];
 
   const hudCurr = document.getElementById('hudCurr');
